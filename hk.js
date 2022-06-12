@@ -39,4 +39,22 @@ browserOpen
       { delay: 50 }
     );
     return loginButtonClicked;
+  })
+  .then(function () {});
+
+function waitAndClick(selector, cPage) {
+  return new Promise(function (resolve, reject) {
+    let waitForModelPromise = cPage.waitForSelector(selector);
+    waitForModelPromise
+      .then(function () {
+        let clickModel = cPage.click(selector);
+        return clickModel;
+      })
+      .then(function () {
+        resolve();
+      })
+      .catch(function (err) {
+        reject();
+      });
   });
+}
