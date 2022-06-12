@@ -32,4 +32,11 @@ browserOpen
       delay: 50,
     });
     return passwordIsEntered;
+  })
+  .then(function () {
+    let loginButtonClicked = page.click(
+      'button[data-analytics="LoginPassword"]',
+      { delay: 50 }
+    );
+    return loginButtonClicked;
   });
