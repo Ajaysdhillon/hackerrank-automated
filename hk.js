@@ -1,7 +1,8 @@
 const puppeteer = require("puppeteer");
 
 const loginLink = "https://www.hackerrank.com/auth/login";
-
+const email = "zurkubardo@vusra.com";
+const password = "931362272";
 let browserOpen = puppeteer.launch({
   headless: false,
   args: ["--start-maximized"],
@@ -19,4 +20,16 @@ browserOpen
     page = newTab;
     let hackerRankOpenPromise = newTab.goto(loginLink);
     return hackerRankOpenPromise;
+  })
+  .then(function () {
+    let emailIsEntered = page.type("input[id = 'input-1']", email, {
+      delay: 50,
+    });
+    return emailIsEntered;
+  })
+  .then(function () {
+    let passwordIsEntered = page.type("input[type = 'password']", password, {
+      delay: 50,
+    });
+    return passwordIsEntered;
   });
