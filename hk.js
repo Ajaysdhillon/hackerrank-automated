@@ -46,6 +46,10 @@ browserOpen
       page
     );
     return clickOnAlgoPromise;
+  })
+  .then(function () {
+    let getToWarmup = waitAndClick('input[value="warmup"]', page);
+    return getToWarmup;
   });
 
 function waitAndClick(selector, cPage) {
