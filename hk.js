@@ -41,11 +41,11 @@ browserOpen
     return loginButtonClicked;
   })
   .then(function () {
-    let clckOnAlgoPromise = waitAndClick(
+    let clickOnAlgoPromise = waitAndClick(
       '.topic-card a[data-attr1="algorithms"]',
       page
     );
-    return clckOnAlgoPromise;
+    return clickOnAlgoPromise;
   });
 
 function waitAndClick(selector, cPage) {
