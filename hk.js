@@ -50,6 +50,20 @@ browserOpen
   .then(function () {
     let getToWarmup = waitAndClick('input[value="warmup"]', page);
     return getToWarmup;
+  })
+  .then(function () {
+    let waitfor3Seconds = page.waitFor(3000);
+    return waitfor3Seconds;
+  })
+  .then(function () {
+    let allChallengesPromise = page.$$(
+      ".ui-btn.ui-btn-normal.primary-cta.ui-btn-line-primary.ui-btn-styled",
+      { delay: 50 }
+    );
+    return allChallengesPromise;
+  })
+  .then(function (questionsArr) {
+    console.log("No. of ques", questionsArr.length);
   });
 
 function waitAndClick(selector, cPage) {
