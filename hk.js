@@ -64,6 +64,8 @@ browserOpen
   })
   .then(function (questionsArr) {
     console.log("No. of ques", questionsArr.length);
+    let questionWillBeSolved = questionSolver(questionsArr[0]);
+    return questionWillBeSolved;
   });
 
 function waitAndClick(selector, cPage) {
@@ -80,5 +82,12 @@ function waitAndClick(selector, cPage) {
       .catch(function (err) {
         reject();
       });
+  });
+}
+
+function questionSolver(question) {
+  return new Promise(function (resolve, reject) {
+    let questionWillBeClicked = question.click();
+    return questionWillBeClicked;
   });
 }
