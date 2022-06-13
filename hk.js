@@ -40,7 +40,13 @@ browserOpen
     );
     return loginButtonClicked;
   })
-  .then(function () {});
+  .then(function () {
+    let clckOnAlgoPromise = waitAndClick(
+      '.topic-card a[data-attr1="algorithms"]',
+      page
+    );
+    return clckOnAlgoPromise;
+  });
 
 function waitAndClick(selector, cPage) {
   return new Promise(function (resolve, reject) {
