@@ -1,5 +1,5 @@
 const puppeteer = require("puppeteer");
-
+const codeObj = require("./codes");
 const loginLink = "https://www.hackerrank.com/auth/login";
 const email = "zurkubardo@vusra.com";
 const password = "931362272";
@@ -64,7 +64,11 @@ browserOpen
   })
   .then(function (questionsArr) {
     console.log("No. of ques", questionsArr.length);
-    let questionWillBeSolved = questionSolver(questionsArr[0]);
+    let questionWillBeSolved = questionSolver(
+      page,
+      questionsArr[0],
+      codeObj.answers[0]
+    );
     return questionWillBeSolved;
   });
 
@@ -85,7 +89,7 @@ function waitAndClick(selector, cPage) {
   });
 }
 
-function questionSolver(question) {
+function questionSolver(page, question, answer) {
   return new Promise(function (resolve, reject) {
     let questionWillBeClicked = question.click();
     questionWillBeClicked
@@ -101,7 +105,9 @@ function questionSolver(question) {
       })
       .then(function () {
         return page.waitForSelector("textarea.custominput", page);
+      })
+      .then(function () {
+        return page.type("textarea.custominput", answer, { delay: 10 });
       });
-    //.then(function () {});
   });
 }
