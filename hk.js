@@ -1,3 +1,4 @@
+const { resolve } = require("path");
 const puppeteer = require("puppeteer");
 const codeObj = require("./codes");
 const loginLink = "https://www.hackerrank.com/auth/login";
@@ -144,8 +145,24 @@ function questionSolver(page, question, answer) {
         let VisPressed = page.keyboard.press("V", { delay: 100 });
         return VisPressed;
       });
-  }).then(function () {
-    let ctrlIsUnPressed = page.keyboard.up("Control");
-    return ctrlIsUnPressed;
-  });
+  })
+    .then(function () {
+      let ctrlIsUnPressed = page.keyboard.up("Control");
+      return ctrlIsUnPressed;
+    })
+    .then(function () {
+      return page.click(
+        ".ui-btn ui-btn-normal ui-btn-primary pull-right hr-monaco-submit ui-btn-styled",
+        {
+          delay: 50,
+        }
+      );
+      //ui-btn ui-btn-normal ui-btn-secondary pull-right msR hr-monaco-compile hr-monaco__run-code ui-btn-styled
+    })
+    .then(function () {
+      resolve();
+    })
+    .catch(function (err) {
+      reject();
+    });
 }
