@@ -108,6 +108,18 @@ function questionSolver(page, question, answer) {
       })
       .then(function () {
         return page.type("textarea.custominput", answer, { delay: 10 });
+      })
+      .then(function () {
+        let ctrlIsPressed = page.keyboard.down("Control");
+        return ctrlIsPressed;
+      })
+      .then(function () {
+        let AisPressed = page.keyboard.press("A", { delay: 100 });
+        return AisPressed;
+      })
+      .then(function () {
+        let XisPressed = page.keyboard.press("X", { delay: 100 });
+        return XisPressed;
       });
   });
 }
