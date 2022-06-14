@@ -102,5 +102,6 @@ function questionSolver(question) {
       .then(function () {
         return page.waitForSelector("textarea.custominput", page);
       });
+    //.then(function () {});
   });
 }
