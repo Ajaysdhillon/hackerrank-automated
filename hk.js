@@ -88,12 +88,19 @@ function waitAndClick(selector, cPage) {
 function questionSolver(question) {
   return new Promise(function (resolve, reject) {
     let questionWillBeClicked = question.click();
-    questionWillBeClicked.then(function () {
-      let EditorInFocusPromise = waitAndClick(
-        ".monaco-editor.no-user-select.vs",
-        page
-      );
-      return EditorInFocusPromise;
-    });
+    questionWillBeClicked
+      .then(function () {
+        let EditorInFocusPromise = waitAndClick(
+          ".monaco-editor.no-user-select.vs",
+          page
+        );
+        return EditorInFocusPromise;
+      })
+      .then(function () {
+        return waitAndClick(".checkbox-input", page);
+      })
+      .then(function () {
+        return page.waitForSelector("textarea.custominput", page);
+      });
   });
 }
