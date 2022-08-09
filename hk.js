@@ -151,7 +151,7 @@ function questionSolver(page, question, answer) {
       return ctrlIsUnPressed;
     })
     .then(function () {
-      return page.click(".hr-monaco__run-code", { delay: 50 });
+      return page.click(".hr-monaco", { delay: 50 });
     })
     .then(function () {
       resolve();
