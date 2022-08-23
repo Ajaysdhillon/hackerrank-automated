@@ -151,10 +151,7 @@ function questionSolver(page, question, answer) {
       return ctrlIsUnPressed;
     })
     .then(function () {
-      return page.click(
-        ".ui-btn ui-btn-normalui-btn-secondarypull-rightmsRhr-monaco-compilehr-monaco__run-code",
-        { delay: 50 }
-      );
+      return page.click(".ui-btn ui-btn-normal", { delay: 50 });
     })
     .then(function () {
       resolve();
