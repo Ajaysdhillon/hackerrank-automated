@@ -64,7 +64,6 @@ browserOpen
     return allChallengesPromise;
   })
   .then(function (questionsArr) {
-    console.log("No. of ques", questionsArr.length);
     let questionWillBeSolved = questionSolver(
       page,
       questionsArr[0],
@@ -151,7 +150,10 @@ function questionSolver(page, question, answer) {
       return ctrlIsUnPressed;
     })
     .then(function () {
-      return page.click(".ui-btn ui-btn-normal ", { delay: 50 });
+      return page.click(
+        ".ui-btn ui-btn-normal ui-btn-primary pull-right hr-monaco-submit ui-btn-styled",
+        { delay: 50 }
+      );
     })
     .then(function () {
       resolve();
