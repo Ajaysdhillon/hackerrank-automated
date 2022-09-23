@@ -150,7 +150,10 @@ function questionSolver(page, question, answer) {
       return ctrlIsUnPressed;
     })
     .then(function () {
-      return page.click(".ui-btn", { delay: 50 });
+      return page.click(
+        ".ui-btn-primary pull-right hr-monaco-submit ui-btn-styled",
+        { delay: 50 }
+      );
     })
     .then(function () {
       resolve();
