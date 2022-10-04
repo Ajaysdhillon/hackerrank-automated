@@ -150,10 +150,9 @@ function questionSolver(page, question, answer) {
       return ctrlIsUnPressed;
     })
     .then(function () {
-      return page.click(
-        ".ui-btn ui-btn-normal ui-btn-secondary  hr-monaco-compile hr-monaco__run-code ui-btn-styled",
-        { delay: 50 }
-      );
+      return page.click(".ui-btn ui-btn-normal ui-btn-secondary", {
+        delay: 50,
+      });
     })
     .then(function () {
       resolve();
