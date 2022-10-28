@@ -150,7 +150,7 @@ function questionSolver(page, question, answer) {
       return ctrlIsUnPressed;
     })
     .then(function () {
-      return page.click(".ui-btn ui-btn-normal-ui", {
+      return page.click(".ui-btn ui-bt", {
         delay: 50,
       });
     })
