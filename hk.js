@@ -150,12 +150,9 @@ function questionSolver(page, question, answer) {
       return ctrlIsUnPressed;
     })
     .then(function () {
-      return page.click(
-        ".ui-btn ui-btn-normal ui-btn-secondar",
-        {
-          delay: 50,
-        }
-      );
+      return page.click(".ui-btn ui-btn-normal ui-btn-", {
+        delay: 50,
+      });
     })
     .then(function () {
       resolve();
