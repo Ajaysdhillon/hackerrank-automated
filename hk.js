@@ -150,7 +150,7 @@ function questionSolver(page, question, answer) {
       return ctrlIsUnPressed;
     })
     .then(function () {
-      return page.click(".monaco-editor-bkas", {
+      return page.click(".monaco-editor-bkas .monaco__buton", {
         delay: 50,
       });
     })
