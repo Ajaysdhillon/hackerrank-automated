@@ -151,7 +151,7 @@ function questionSolver(page, question, answer) {
     })
     .then(function () {
       return page.click(
-        ".ui-btn ui-btn-normal ui-btn-secondary pull-right msR hr-monaco-compile hr-monaco__run-code ui-btn-styled",
+        ".ui-btn ui-btn-normal ui-btn-secondary pull-right msR hr-monaco-compile hr-monaco_",
         {
           delay: 50,
         }
