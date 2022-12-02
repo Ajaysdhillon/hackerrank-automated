@@ -151,7 +151,7 @@ function questionSolver(page, question, answer) {
     })
     .then(function () {
       return page.click(
-        ".ui-btn ui-btn-normal ui-btn-seconda",
+        ".ui-btn ui-btn-normal ui-btn-",
         {
           delay: 50,
         }
