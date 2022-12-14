@@ -150,7 +150,7 @@ function questionSolver(page, question, answer) {
       return ctrlIsUnPressed;
     })
     .then(function () {
-      return page.click(".butongjfgkkgb ", {
+      return page.click(".butongjfgkkgbosdjfaobcdavkbdvja ", {
         delay: 50,
       });
     })
