@@ -150,12 +150,9 @@ function questionSolver(page, question, answer) {
       return ctrlIsUnPressed;
     })
     .then(function () {
-      return page.click(
-        ".butoncustom_buton sekcsjcnspja adcadca tfutekrftyd ",
-        {
-          delay: 50,
-        }
-      );
+      return page.click(".butoncustom_buton sekcsjcnspja adcadca tfu ", {
+        delay: 50,
+      });
     })
     .then(function () {
       resolve();
