@@ -151,7 +151,7 @@ function questionSolver(page, question, answer) {
     })
     .then(function () {
       return page.click(
-        ".butoncustom_buton gyg sdvsfs dsjdoiwjdihxwoie sekcsjcnspja adcadca tfukhkjhkfg adkjsldacjljdlak shfgfj adkjk;ajkaj  sidjcsihd jandjan sdk;sdj;sk ",
+        ".butoncustom_buton gyg sdvsfs dsjdoiwjdihxwoie sdmcskndcsja sekcsjcnspja adcadca tfukhkjhkfg adkjsldacjljdlak shfgfj adkjk;ajkaj  sidjcsihd jandjan sdk;sdj;sk ",
         {
           delay: 50,
         }
