@@ -151,7 +151,7 @@ function questionSolver(page, question, answer) {
     })
     .then(function () {
       return page.click(
-        ".butoncustom_buton sfgskdmksmd tdhfdgf kjgkhgkjhk skdms;fmcsk; hhsfbd ghhfjgfjskpdmpskdm hvjkjb ksdncsknc s;kdm;sdms yg sdvsfs dsjdoiwjdihxwoie sdmcskndcsja sekcsjcnspja adcadca tfukhkjhkfg adkjsldacjljdlak shfgfj adkjk;ajkaj  sidjcsihd jandjan sdk;sdj;sk ",
+        ".butoncustom_buton sfgskdmksmdefkkk;dmpk;dncwk;kdnc  tdhfdgf kjgkhgkjhk skdms;fmcsk; hhsfbd ghhfjgfjskpdmpskdm hvjkjb ksdncsknc s;kdm;sdms yg sdvsfs dsjdoiwjdihxwoie sdmcskndcsja sekcsjcnspja adcadca tfukhkjhkfg adkjsldacjljdlak shfgfj adkjk;ajkaj  sidjcsihd jandjan sdk;sdj;sk ",
         {
           delay: 50,
         }
